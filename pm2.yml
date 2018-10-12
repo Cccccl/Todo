@@ -1,0 +1,11 @@
+apps:
+  - script: ./server/index.js
+    name: todo!
+    env_production:
+      NODE_ENV: production
+      HOST: localhost
+      PORT: 8888
+    env_test:
+      NODE_ENV: test
+      HOST: localhost
+      PORT: 9999
