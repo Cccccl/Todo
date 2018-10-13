@@ -23,7 +23,6 @@ const handleError = (err) => {
 
 export default {
   fetchTodos ({ commit }) {
-    console.log(load)
     load.show()
     return model.getAllTodos()
       .then(data => {

@@ -33,6 +33,7 @@ module.exports = (appId, appKey) => {
   }
   return {
     async getAllTodos () {
+      console.log('getAllTodos')
       const result = await request.get(
         `/${className}`,
         { headers: getHeaders() }

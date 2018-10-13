@@ -12,7 +12,6 @@ const serverRender = require('./server-render')
 const serverConfig = require('../../../build/webpack.config.server.js')
 
 let bundle
-let i = 0
 // 这里使用webpack,webpack相关
 const serverCompiler = webpack(serverConfig)
 serverCompiler.outputFileSystem = mfs

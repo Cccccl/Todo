@@ -13,7 +13,6 @@ module.exports = async (ctx, renderer, template, bundle) => {
       return ctx.redirect(context.router.currentRoute.fullPath)
     }
     const appString = await renderer.renderToString(app, context)
-    
 
     const { title } = context.meta.inject()
     const html = ejs.render(template, {

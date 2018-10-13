@@ -30,6 +30,7 @@ app.use(async (ctx, next) => {
 
 app.use(async (ctx, next) => {
   try {
+    console.log('日志：')
     console.log(`request with path ${ctx.path}`)
     await next()
   } catch (err) {
@@ -38,12 +39,12 @@ app.use(async (ctx, next) => {
     if (isDev) {
       ctx.body = err.message
     } else {
-      ctx.body = 'please try again later'
+      ctx.body = '404!!!'
     }
   }
 })
 
-app.use(async(ctx, next) => {
+app.use(async (ctx, next) => {
   ctx.db = db
   await next()
 })
@@ -52,7 +53,6 @@ app.use(koaBody())
 app.use(userRouter.routes()).use(userRouter.allowedMethods())
 app.use(staticRouter.routes()).use(staticRouter.allowedMethods())
 app.use(todoApiRouter.routes()).use(todoApiRouter.allowedMethods())
-
 
 let pageRouter
 if (isDev) {

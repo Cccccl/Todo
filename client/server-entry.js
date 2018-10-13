@@ -8,7 +8,13 @@ export default (context) => {
     if (context.user) {
       store.state.user = context.user
     }
-
+    console.log(context.user)
+    /* 开发环境下，不存在问题，
+     * 生产环境下，就存在问题。开发环境下刷新store里的数据会自动重置为空值，但是生产环境下store里的数据会保持住。
+     * store.state.user 的值没有被删除掉，就算退出登录 还是存在值
+     * 后续的todo页还是会根据store.state.user
+     */
+    console.log(store.state.user)
     router.push(context.url)
     router.onReady(() => {
       const matchedComponents = router.getMatchedComponents()

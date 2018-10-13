@@ -14,7 +14,7 @@ const config = {
      * because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.
      */
     // publicPath: '/'
-    publicPath: 'http://127.0.0.1:7777/dist/client/' 
+    publicPath: 'http://127.0.0.1:7777/dist/client/'
   },
   module: {
     rules: [
