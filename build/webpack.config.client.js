@@ -87,7 +87,8 @@ if (isDev) {
     },
     output: {
       filename: '[name].[chunkhash:8].js',
-      publicPath: '/dist/client/'
+      // publicPath: '/dist/client/'
+      publicPath: cdnConfig.host
     },
     module: {
       rules: [
