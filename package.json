@@ -16,7 +16,7 @@
     "start": "cross-env NODE_ENV=production node server/index.js",
     "lint": "eslint --ext .js,.jsx,.vue build/ client/ config/ server/",
     "lint-fix": "eslint --fix --ext .js,.jsx,.vue build/ client/ config/ server/",
-    "precommit": "npm run lint-fix"
+    "precommit": "npm run lint"
   },
   "keywords": [
     "vue",

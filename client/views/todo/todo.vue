@@ -55,6 +55,9 @@ export default {
     /* 在服务端渲染的时候mounted是执行不到的。
      * mounted,是$el对象插入到dom节点之后，才会被执行。
      * 服务端渲染是没有dom这个概念，所以执行不到。
+     * 
+     * 二次cgi问题，通用的重构直出方案，到前端的代码会正常执行，这样cgi会在前端再发一次。 
+     * 服务端和客户端都发送了一次请求，浪费资源
      */
     if (this.todos && this.todos.length < 1) {
       this.fetchTodos()

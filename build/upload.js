@@ -27,7 +27,7 @@ const doUpload = (key, file) => {
   return new Promise((resolve, reject) => {
     formUploader.putFile(uploadToken, key, file, putExtra, (err, body, info) => {
       if (err) {
-        return reject(err)
+         return reject(err)
       }
       if (info.statusCode === 200) {
         resolve(body)
@@ -38,7 +38,7 @@ const doUpload = (key, file) => {
   })
 }
 
-const publicPath = path.join(__dirname, '../dist/server/resources/client/assets/images/')
+const publicPath = path.join(__dirname, '../dist/client')
 
 // 文件夹有嵌套，需要一个递推的方法。一级一级往下找 把所有文件 都传上去。
 const uploadAll = (dir, prefix) => {
