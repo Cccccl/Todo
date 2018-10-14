@@ -27,7 +27,7 @@ const doUpload = (key, file) => {
   return new Promise((resolve, reject) => {
     formUploader.putFile(uploadToken, key, file, putExtra, (err, body, info) => {
       if (err) {
-         return reject(err)
+        return reject(err)
       }
       if (info.statusCode === 200) {
         resolve(body)

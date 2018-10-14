@@ -10,7 +10,7 @@ export default (context) => {
     } else {
       store.todos = []
       store.state.user = null
-	}
+    }
     console.log(context.user)
     /* 开发环境下，不存在问题，
      * 生产环境下，就存在问题。开发环境下刷新store里的数据会自动重置为空值，但是生产环境下store里的数据会保持住。

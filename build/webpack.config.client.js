@@ -5,6 +5,7 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const ExtractPlugin = require('extract-text-webpack-plugin')
 const VueClientPlugin = require('vue-server-renderer/client-plugin')
+const cdnConfig = require('../config/app.config').cdn
 
 const isDev = process.env.NODE_ENV === 'development'
 const defaultPlugins = [
